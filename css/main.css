@@ -140,5 +140,21 @@ textarea {
   display: inline-block;
   width: 50px;
   margin-left: 360px;
+
+}
+
+.original {
   color: #079;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.black {
+  color: black;
 }

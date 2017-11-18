@@ -35,4 +35,16 @@ text.addEventListener('keyup', function() {
   var letters = text.value.length;
   var restaContador = 140 - letters;
   counter.textContent = restaContador;
+  //Agregando colores a los caracteres
+}) ;
+text.addEventListener('keyup', function() {
+  var letters = text.value.length;
+  var negative = -1;
+  if (letters >= 0 && letters <= 120) {
+  counter.className = 'original';
+} else if(letters = 122 && letters <= 130){
+  counter.className = 'green';
+} else if(letters = 131 && letters <= 140){
+  counter.className = 'red';
+}
 }) ;
