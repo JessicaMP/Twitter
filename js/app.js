@@ -1,40 +1,38 @@
 var text = document.getElementById('text');
+var contador = 140;
 var button = document.getElementById('button');
 var counter = document.getElementsByClassName('counter')[0];
 var container = document.getElementById('container');
-
+//Agregando evento click al boton para q te retorne el contenido ingresado
 button.addEventListener('click', function(event) {
-
-  if (text.value) {
     var firstBox = document.createElement('div');
     var content = document.createElement('a');
-//Agregando los estilos con css
     content.textContent = text.value;
+//Agregando los estilos con css
     firstBox.classList.add('styleBox');
     content.classList.add('styleLetter');
-
-    firstBox.appendChild(content);
-    container.appendChild(firstBox);
-
+if (text.value == false) {
+  alert('Ingrese contenido:');
+}else{
+  firstBox.appendChild(content);
+  container.appendChild(firstBox);
     text.value = '';
   }
-
-  //text.onKeypress = text;
-   //button.classList.add('buttonColor');
 });
 
+//button.removeEventListener('click', function(event));
+
+//Cambio de color del boton al ingresar texto
 text.addEventListener('keyup', function() {
   var contenido = text.value;
-  if (contenido == '') {
+  if (contenido == '' || contenido === ' ') {
     button.classList.remove('buttonColor');
+
   }else {
     button.classList.add('buttonColor');
   }
-
-});
-
-/*text.addEventListener('keyup', function(ke) {
-  numLetter = text.value.lenght;
-if (numLetter = 1 && numLetter < 120) {
-})
-}*/
+  //Agregando el contador
+  var letters = text.value.length;
+  var restaContador = 140 - letters;
+  counter.textContent = restaContador;
+}) ;
