@@ -81,6 +81,10 @@ span {
   width: 44%;
 }
 
+.box-right-big {
+  height: 400px;
+}
+
 button {
   height: 40px;
   width: 120px;
@@ -98,6 +102,12 @@ textarea {
   border: none;
   font-size: 16px;
   outline: none;
+  overflow: hidden; /*Esto le Quita el scroll al textarea */
+  resize: none;
+}
+
+.textarea-big {
+  height: 160px;
 }
 
 .box-right hr{
@@ -108,7 +118,7 @@ textarea {
 
 #container {
   display: block;
-  width: 90%;
+  width: 85%;
   background-color: transparent;
   overflow: auto;
   margin: 0px 100px;
@@ -117,7 +127,7 @@ textarea {
 
 .styleBox {
   background-color: white;
-  width: 100%;
+  width: auto;
   height: 100px;
   text-decoration: none;
   border-radius: 10px;
@@ -125,10 +135,12 @@ textarea {
   padding: 10px;
   margin: 0;
   margin-bottom: 20px;
+  overflow: hidden;
 }
 
 .styleLetter {
   text-decoration: none;
+
 }
 
 .buttonColor {
@@ -139,8 +151,9 @@ textarea {
 .box-right p {
   display: inline-block;
   width: 50px;
-  margin-left: 360px;
-
+  margin-left: 390px;
+  margin-right: 0;
+  box-sizing: border-box;
 }
 
 .original {
