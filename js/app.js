@@ -7,17 +7,20 @@ var boxRight = document.getElementsByClassName('box-right')[0];
 //Agregando evento click al boton para q te retorne el contenido ingresado
 button.addEventListener('click', function(event) {
     var firstBox = document.createElement('div');
-    var content = document.createElement('a');
+    var content = document.createElement('p');
     content.textContent = text.value;
+    var time = document.createElement('p');
+    time.textContent = timeDate();
 //Agregando los estilos con css
-    firstBox.classList.add('styleBox');
-    content.classList.add('styleLetter');
+    firstBox.className = 'styleBox';
+    content.className = 'styleLetter';
+    time.className = 'styleLetter';
 if (text.value == false) {
   alert('Ingrese contenido:');
 }else{
   firstBox.appendChild(content);
+  firstBox.appendChild(time);
   container.appendChild(firstBox);
-
     text.value = '';
   }
 });
@@ -62,3 +65,15 @@ text.addEventListener('keyup', function() {
     button.disabled = false;
   }
 });
+// Agregando la hora
+var timeDate = function () {
+  var f = new Date();
+  var time = f.getHours() + ":" + f.getMinutes();
+  var timeAbsolute = '';
+  if (f.getHours() <= 12) {
+    timeAbsolute = time + ' AM';
+  }else {
+    timeAbsolute = time + ' PM';
+  }
+  return timeAbsolute;
+}
