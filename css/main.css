@@ -13,6 +13,10 @@ h1 {
   letter-spacing: 4px;
 }
 
+h1:hover {
+  color: #caf;
+}
+
 div {
   margin-top: 10px;
   margin-bottom: 50px;
