@@ -4,8 +4,14 @@ var button = document.getElementById('button');
 var counter = document.getElementsByClassName('counter')[0];
 var container = document.getElementById('container');
 var boxRight = document.getElementsByClassName('box-right')[0];
+
+/*Window.onload = function(){
+};*/
+Window.onload = timeDate;
+
 //Agregando evento click al boton para q te retorne el contenido ingresado
 button.addEventListener('click', function(event) {
+  /*event.preventDefaul*/
     var firstBox = document.createElement('div');
     var content = document.createElement('p');
     content.textContent = text.value;
@@ -16,15 +22,16 @@ button.addEventListener('click', function(event) {
     content.className = 'styleLetter';
     time.className = 'styleLetter';
 if (text.value == false) {
-  alert('Ingrese contenido:');
+  //alert('Ingrese contenido:');
+  button.disabled = true;
 }else{
   firstBox.appendChild(content);
   firstBox.appendChild(time);
   container.appendChild(firstBox);
     text.value = '';
+    text.focus();
   }
 });
-
 //Cambio de color del boton al ingresar texto
 text.addEventListener('keyup', function() {
   var contenido = text.value;

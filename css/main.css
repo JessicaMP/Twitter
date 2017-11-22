@@ -126,7 +126,7 @@ textarea {
 #container {
   display: block;
   overflow: auto;
-  width: 85%;
+  width: 87%;
   background-color: transparent;
   margin: 0px 100px;
   box-sizing: border-box;
@@ -166,6 +166,10 @@ textarea {
   box-sizing: border-box;
 }
 
+.original, .green, .red {
+  font-weight: bold;
+}
+
 .original {
   color: #079;
 }
@@ -176,8 +180,4 @@ textarea {
 
 .red {
   color: red;
-}
-
-.black {
-  color: black;
 }
